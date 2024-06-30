@@ -4,14 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto JavaScript</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap -->
+
+    <title>Radio Mas</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- FontAwesome -->
+
+    <!-- Css -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Css -->
+
+    <!-- Youtube -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Youtube -->
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Radio Mas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Programas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Radio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <main>
+        <div class="chat">
+            <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-beat fa-2xl"
+                    style="color: #ffffff;"></i></a>
+        </div>
+
+        <!-- Separador -->
+
+        <section class="controlReproductor">
+            <div>
+                <i class="fa-sharp fa-solid fa-circle fa-beat" style="color: #e40c0c;"></i>
+                <p> <strong>En vivo</strong> ¡Nos escuchas, Nos ves!</p>
+            </div>
+
+            <div class="controles">
+                <button id="reproducir"><i class="fa-solid fa-play fa-xl"
+                        style="color: #ff4500; margin-right: 10px;"></i>Reproducir</button>
+                <button id="pausar"><i class="fa-solid fa-pause fa-xl"
+                        style="color: #ffffff; margin-right: 10px;"></i>Pausar</button>
+                <button id="reiniciar"><i class="fa-solid fa-rotate-left fa-xl"
+                        style="color: #ffffff; margin-right: 10px;"></i>Reiniciar</button>
+
+                <input id="volumen" type="range" min="0" max="100" step="1">
+            </div>
+        </section>
+
+        <!-- Separador -->
+
+        <section class="introduccion">
+            <div>
+                <img src="./img/logo.png" alt="radioImagen">
+            </div>
+            <div>
+                <h1>Radio Mas,</h1>
+                <h2>la <strong>primera <br> radio multimedia</strong> de <br> <strong>Uruguay</strong></h2>
+                <a href="#verTransmision">Ver transmisión en vivo 🡣</a>
+            </div>
+        </section>
+
+        <!-- Separador -->
+
+        <section id="verTransmision" class="video">
+            <div class="videoEstilo">
+                <label for="videoSelect">Aquí podrás ver y escuchar nuestros <strong>directos</strong>. Además, podrás
+                    seleccionar aquellos <strong>ya emitidos</strong> cuantas veces quieras &#x1f447;</label>
+                <select id="videoSelect">
+                    <option value="30oa0b2mdUo" selected>Directo</option>
+                    <option value="7WQrNnZetm0">30/06</option>
+                    <option value="EX8oREp8DWE">29/06</option>
+                    <option value="7f9zUOVNqRI">28/06</option>
+                    <option value="YglZ5BzPbYs">27/06</option>
+                </select>
+            </div>
+
+            <div id="reproductor"></div>
+        </section>
+
+        <!-- Separador -->
+
+        <section class="votacion">
+            <h5>TOP 3 Ranking #RankingRM</h5>
+            <p>Votación de los artistas <strong>más escuchados</strong> en 2024.</p>
+            <div class="artistas">
+                <div class="artista" id="maria">
+                    <img src="./img/mariaBecerra.jpg" alt="Maria Becerra" onclick="votar('maria')">
+                    <p>Maria Becerra</p>
+                    <span id="votosMaria">0 votos</span>
+                </div>
+                <div class="artista" id="duki">
+                    <img src="./img/duki.jpg" alt="Duki" onclick="votar('duki')">
+                    <p>Duki</p>
+                    <span id="votosDuki">0 votos</span>
+                </div>
+                <div class="artista" id="emilia">
+                    <img src="./img/emiliaMernes.jpg" alt="Emilia Mernes" onclick="votar('emilia')">
+                    <p>Emilia Mernes</p>
+                    <span id="votosEmilia">0 votos</span>
+                </div>
+            </div>
+            <p id="resultado"></p>
+        </section>
+
+        <!-- Separador -->
+
     </main>
+
+    <footer>
+        <section>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:@hotmail.com" target="_blank">E-mail</a> </li>
+                    <li><a href="" target="_blank">Celular</a> </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/radiomasuy/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@radiomasuytv" target="_blank">Youtube</a></li>
+                    <li><a href="https://www.twitch.tv/radiomasuytv" target="_blank">Twitch</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Sitio</h4>
+                <ul>
+                    <li><a href="#sitio">Inicio</a></li>
+                    <li><a href="#sitio">Programas</a></li>
+                    <li><a href="#sitio">Radio</a></li>
+                    <li><a href="#sitio">Nosotros</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="derechos">
+            <p>© Radiomas. Todos los derechos reservados</p>
+        </section>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
     <script src="./js/main.js"></script>
+    <!-- Javascript -->
 </body>
 
 </html>
