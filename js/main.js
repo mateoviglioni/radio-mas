@@ -1,4 +1,4 @@
-//! Tercera Entrega JavaScript 01/07/2024.
+//! Tercera Entrega Proecto Final JavaScript.
 
 //! ------------------------------------------------------------------------------------------------------- Inicio.
 
@@ -106,3 +106,23 @@ function mostrarResultado() {
 }
 
 //! ------------------------------------------------------------------------------------------------------- Fin.
+
+//! ------------------------------------------------------------------------------------------------------- Asincronismo con fetch.
+
+fetch('https://pokeapi.co/api/v2/pokemon/25')
+    .then(response => response.json())
+    .then(datos => {
+        console.log(datos);
+        const contenedorDatos = document.getElementById('datosPokemon');
+        contenedorDatos.innerHTML = `
+            <h3>${datos.name.charAt(0).toUpperCase() + datos.name.slice(1)}</h3>
+            <p>Altura: ${datos.height} dm</p>
+            <p>Peso: ${datos.weight} hg</p>
+            <img src="${datos.sprites.front_default}" alt="${datos.name}">
+        `;
+    })
+    .catch(error => console.error('Error al obtener los datos del Pokémon:', error));
+
+//! ------------------------------------------------------------------------------------------------------- Fin.
+
+
