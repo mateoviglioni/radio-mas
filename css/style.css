@@ -314,11 +314,23 @@ select option {
     object-fit: cover;
 }
 
-.reproductor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px 0 0 0;
+.twitch {
+    .container {
+        display: flex;
+        justify-content: center;
+        /* Centra horizontalmente */
+        align-items: center;
+        /* Centra verticalmente */
+        height: 100vh;
+        /* Usa la altura completa de la ventana */
+        margin: 30px 0 0 0;
+    }
+
+}
+
+iframe {
+    border: none;
+    /* Quita el borde del iframe */
 }
 
 .markers {
@@ -353,7 +365,6 @@ select option {
     background: white;
     opacity: 1;
 }
-
 
 .logos {
     overflow: hidden;
