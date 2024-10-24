@@ -315,17 +315,14 @@ select option {
 }
 
 .twitch {
-    .container {
-        display: flex;
-        justify-content: center;
-        /* Centra horizontalmente */
-        align-items: center;
-        /* Centra verticalmente */
-        height: 100vh;
-        /* Usa la altura completa de la ventana */
-        margin: 30px 0 0 0;
-    }
-
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    height: 100vh;
+    /* Usa la altura completa de la ventana */
+    margin: 30px 0 0 0;
 }
 
 iframe {
