@@ -10,7 +10,15 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap -->
 
-    <title>Radio Mas</title>
+    <title>RadioMas</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Favicon -->
+
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -29,7 +37,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">Radio Mas</a>
+                <a class="navbar-brand" href="./index.html">RadioMas</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -55,6 +63,10 @@
     </header>
 
     <main>
+        <div class="shadow-background"></div>
+
+        <!-- Separador -->
+
         <div class="chat">
             <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-beat fa-2xl"
                     style="color: #ffffff;"></i></a>
@@ -63,19 +75,15 @@
         <!-- Separador -->
 
         <section class="controlReproductor">
-            <div>
-                <i class="fa-sharp fa-solid fa-circle fa-beat" style="color: #e40c0c;"></i>
-                <p> <strong>En vivo</strong> ¡Nos escuchas, Nos ves!</p>
-            </div>
-
             <div class="controles">
                 <button id="reproducir"><i class="fa-solid fa-play fa-xl"
-                        style="color: #ff4500; margin-right: 10px;"></i>Reproducir</button>
+                        style="color: #ff4500; margin-right: 10px;"></i></button>
                 <button id="pausar"><i class="fa-solid fa-pause fa-xl"
-                        style="color: #ffffff; margin-right: 10px;"></i>Pausar</button>
+                        style="color: #ffffff; margin-right: 10px;"></i></button>
                 <button id="reiniciar"><i class="fa-solid fa-rotate-left fa-xl"
-                        style="color: #ffffff; margin-right: 10px;"></i>Reiniciar</button>
+                        style="color: #ffffff; margin-right: 10px;"></i></button>
 
+                <i class="fa-solid fa-volume-off fa-xl" style="color: #ffffff;"></i>
                 <input id="volumen" type="range" min="0" max="100" step="1">
             </div>
         </section>
@@ -84,59 +92,61 @@
 
         <section class="introduccion">
             <div>
-                <img src="./img/logo.png" alt="radioImagen">
+                <img src="./img/logo.png" alt="radioLogo">
             </div>
             <div>
-                <h1>Radio Mas,</h1>
-                <h2>la <strong>primera <br> radio multimedia</strong> de <br> <strong>Uruguay</strong></h2>
-                <a href="#verTransmision">Ver transmisión en vivo 🡣</a>
+                <h1>RadioMas</h1>
+                <h2>La <strong>primera radio<br> multimedia</strong> de <br> <strong>Uruguay</strong>, transmitiendo
+                    <br>también en <strong>90.7 FM</strong>.
+                </h2>
+                <a href="#verTransmision">Ver transmisión en vivo
+                    <i class="fa-solid fa-arrow-down-long fa-beat fa-sm" style="margin-left: 5px;"></i>
+                </a>
             </div>
         </section>
 
         <!-- Separador -->
 
-        <section id="verTransmision" class="video">
-            <div class="videoEstilo">
-                <label for="videoSelect">Aquí podrás ver y escuchar nuestros <strong>directos</strong>. Además, podrás
-                    seleccionar aquellos <strong>ya emitidos</strong> cuantas veces quieras &#x1f447;</label>
-                <select id="videoSelect">
-                    <option value="30oa0b2mdUo" selected>Directo</option>
-                    <option value="7WQrNnZetm0">30/06</option>
-                    <option value="EX8oREp8DWE">29/06</option>
-                    <option value="7f9zUOVNqRI">28/06</option>
-                    <option value="YglZ5BzPbYs">27/06</option>
-                </select>
+        <section class="slider-container">
+            <div class="slider">
+                <a name="img_1"><img src="img/bannerPublicidad.jpg" alt="Banner Uno" /></a>
+                <a name="img_2"><img src="img/bannerPublicidad2.jpg" alt="Banner Dos" /></a>
+                <a name="img_3"><img src="img/bannerPublicidad3.jpg" alt="Banner Tres" /></a>
+                <a name="img_4"><img src="img/bannerPublicidad4.jpg" alt="Banner Cuatro" /></a>
             </div>
 
-            <div id="reproductor"></div>
+            <ul class="markers">
+                <li><a href="#img_1"></a></li>
+                <li><a href="#img_2"></a></li>
+                <li><a href="#img_3"></a></li>
+                <li><a href="#img_4"></a></li>
+            </ul>
         </section>
 
         <!-- Separador -->
 
-        <section class="votacion">
-            <h5>TOP 3 Ranking #RankingRM</h5>
-            <p>Votación de los artistas <strong>más escuchados</strong> en 2024.</p>
-            <div class="artistas">
-                <div class="artista" id="maria">
-                    <img src="./img/mariaBecerra.jpg" alt="Maria Becerra" onclick="votar('maria')">
-                    <p>Maria Becerra</p>
-                    <span id="votosMaria">0 votos</span>
-                </div>
-                <div class="artista" id="duki">
-                    <img src="./img/duki.jpg" alt="Duki" onclick="votar('duki')">
-                    <p>Duki</p>
-                    <span id="votosDuki">0 votos</span>
-                </div>
-                <div class="artista" id="emilia">
-                    <img src="./img/emiliaMernes.jpg" alt="Emilia Mernes" onclick="votar('emilia')">
-                    <p>Emilia Mernes</p>
-                    <span id="votosEmilia">0 votos</span>
+        <section>
+            <div class="logos">
+                <div class="logos-slide">
+                    <a href="" target="_blank" title="Naranja"><img src="./img/naranja.png" alt="Naranja"></a>
+                    <a href="" target="_blank" title="Amarillo"><img src="./img/amarillo.png" alt="Amarillo"></a>
+                    <a href="" target="_blank" title="Blanco"><img src="./img/blanco.png" alt="Blanco"></a>
+                    <a href="" target="_blank" title="Naranja"><img src="./img/naranja.png" alt="Naranja"></a>
+                    <a href="" target="_blank" title="Amarillo"><img src="./img/amarillo.png" alt="Amarillo"></a>
+                    <a href="" target="_blank" title="Blanco"><img src="./img/blanco.png" alt="Blanco"></a>
+                    <a href="" target="_blank" title="Naranja"><img src="./img/naranja.png" alt="Naranja"></a>
+                    <a href="" target="_blank" title="Amarillo"><img src="./img/amarillo.png" alt="Amarillo"></a>
+                    <a href="" target="_blank" title="Blanco"><img src="./img/blanco.png" alt="Blanco"></a>
                 </div>
             </div>
-            <p id="resultado"></p>
         </section>
 
-        <!-- Separador -->
+        <section class="maps">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.8875430653893!2d-55.23500842579463!3d-34.378780373035696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x950aba243c30fe01%3A0x70785e91743d568f!2sC.%20Washington%20Beltr%C3%A1n%20363%2C%2030000%20Minas%2C%20Departamento%20de%20Lavalleja!5e0!3m2!1ses!2suy!4v1723150609397!5m2!1ses!2suy"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
 
     </main>
 
@@ -146,16 +156,18 @@
                 <h4>Contacto</h4>
                 <ul>
                     <li><a href="mailto:@hotmail.com" target="_blank">E-mail</a> </li>
-                    <li><a href="" target="_blank">Celular</a> </li>
+                    <li><a href="" target="_blank">Cel: 098 180 170</a> </li>
+                    <li>Tel: 4443 6430</li>
                 </ul>
             </div>
 
             <div>
                 <h4>Redes Sociales</h4>
                 <ul>
-                    <li><a href="https://www.instagram.com/radiomasuy/" target="_blank">Instagram</a></li>
                     <li><a href="https://www.youtube.com/@radiomasuytv" target="_blank">Youtube</a></li>
                     <li><a href="https://www.twitch.tv/radiomasuytv" target="_blank">Twitch</a></li>
+                    <li><a href="https://www.instagram.com/radiomasuy/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a></li>
                 </ul>
             </div>
 
@@ -163,16 +175,22 @@
                 <h4>Sitio</h4>
                 <ul>
                     <li><a href="#sitio">Inicio</a></li>
-                    <li><a href="#sitio">Programas</a></li>
-                    <li><a href="#sitio">Radio</a></li>
-                    <li><a href="#sitio">Nosotros</a></li>
                 </ul>
             </div>
         </section>
 
         <section class="derechos">
-            <p>© Radiomas. Todos los derechos reservados</p>
+            <p>© Radiomas. Todos los derechos reservados. 2024.</p>
         </section>
+
+        <div class="socialMedia">
+            <a href=""><img src="img/instagram.png" alt=""></a>
+            <a href=""><img src="img/facebook.png" alt=""></a>
+            <a href=""><img src="img/x.png" alt=""></a>
+            <a href=""><img src="img/tiktok.png" alt=""></a>
+            <a href=""><img src="img/youtube.png" alt=""></a>
+            <a href=""><img src="img/twitch.png" alt=""></a>
+        </div>
     </footer>
 
     <!-- Bootstrap -->
