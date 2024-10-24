@@ -179,10 +179,6 @@ iframe {
     font-weight: 400;
 }
 
-#reproductor {
-    margin: 60px;
-}
-
 .video {
     display: flex;
     justify-content: center;

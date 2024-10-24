@@ -4,34 +4,33 @@
 
 //?--------------------------------------- Reproductor.
 
-// Aquí va tu JavaScript
-const iframe = document.getElementById('twitch-iframe');
-const playButton = document.getElementById('reproducir');
-const pauseButton = document.getElementById('pausar');
-const resetButton = document.getElementById('reiniciar');
-const volumeControl = document.getElementById('volumen');
-
 const player = new Twitch.Player('twitch-iframe', {
     channel: 'radiomasuytv',
     parent: ['radio-mas.netlify.app'],
+    width: 800,
+    height: 480,
+    muted: true // Se asegura de que el video comience silenciado
 });
 
-playButton.addEventListener('click', () => {
-    player.play();
-});
-
-pauseButton.addEventListener('click', () => {
-    player.pause();
-});
-
-resetButton.addEventListener('click', () => {
-    player.seek(0);
-    player.play();
-});
-
+// Controlar el volumen con la barra
+const volumeControl = document.getElementById('volumen');
 volumeControl.addEventListener('input', (event) => {
-    const volume = event.target.value / 100;
-    player.setVolume(volume);
+    const volume = event.target.value / 100; // Convertir el valor a un rango de 0 a 1
+    player.setVolume(volume); // Establecer el volumen del reproductor
+});
+
+// Funcionalidad de los botones de control
+document.getElementById('reproducir').addEventListener('click', () => {
+    player.play(); // Reproducir el video
+});
+
+document.getElementById('pausar').addEventListener('click', () => {
+    player.pause(); // Pausar el video
+});
+
+document.getElementById('reiniciar').addEventListener('click', () => {
+    player.seek(0); // Reiniciar el video al inicio
+    player.play(); // Reproducir el video nuevamente
 });
 
 //?--------------------------------------- Reproductor.
