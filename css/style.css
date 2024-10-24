@@ -314,6 +314,12 @@ select option {
     object-fit: cover;
 }
 
+.reproductor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .markers {
     display: flex;
     justify-content: center;
