@@ -4,34 +4,27 @@
 
 //?--------------------------------------- Reproductor.
 
-const player = new Twitch.Player('twitch-iframe', {
-    channel: 'radiomasuytv',
-    parent: ['radio-mas.netlify.app'],
-    width: 800,
+var player;
+new Twitch.Embed("twitch-embed", {
+    channel: "radiomasuytv",  // Cambia esto por tu canal
+    width: 854,
     height: 480,
-    muted: true // Se asegura de que el video comience silenciado
+    layout: "video",
+    autoplay: false,
+    events: {
+        onReady: function (event) {
+            player = event.target;
+        }
+    }
 });
 
-// Controlar el volumen con la barra
-const volumeControl = document.getElementById('volumen');
-volumeControl.addEventListener('input', (event) => {
-    const volume = event.target.value / 100; // Convertir el valor a un rango de 0 a 1
-    player.setVolume(volume); // Establecer el volumen del reproductor
-});
+document.getElementById("play").onclick = function () {
+    player.play();
+};
 
-// Funcionalidad de los botones de control
-document.getElementById('reproducir').addEventListener('click', () => {
-    player.play(); // Reproducir el video
-});
-
-document.getElementById('pausar').addEventListener('click', () => {
-    player.pause(); // Pausar el video
-});
-
-document.getElementById('reiniciar').addEventListener('click', () => {
-    player.seek(0); // Reiniciar el video al inicio
-    player.play(); // Reproducir el video nuevamente
-});
+document.getElementById("pause").onclick = function () {
+    player.pause();
+};
 
 //?--------------------------------------- Reproductor.
 

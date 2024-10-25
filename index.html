@@ -27,9 +27,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- Css -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <!-- Script -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <!-- Script -->
 </head>
 
 <body>
@@ -73,21 +73,6 @@
 
         <!-- Separador -->
 
-        <section class="controlReproductor">
-            <div class="controles">
-                <button id="reproducir"><i class="fa-solid fa-play fa-xl"
-                        style="color: #ff4500; margin-right: 10px;"></i></button>
-                <button id="pausar"><i class="fa-solid fa-pause fa-xl"
-                        style="color: #ffffff; margin-right: 10px;"></i></button>
-                <button id="reiniciar"><i class="fa-solid fa-rotate-left fa-xl"
-                        style="color: #ffffff; margin-right: 10px;"></i></button>
-                <i class="fa-solid fa-volume-off fa-xl" style="color: #ffffff;"></i>
-                <input id="volumen" type="range" min="0" max="100" step="1">
-            </div>
-        </section>
-
-        <!-- Separador -->
-
         <section class="introduccion">
             <div>
                 <img src="./img/logo.png" alt="radioLogo">
@@ -102,6 +87,21 @@
                 </a>
             </div>
         </section>
+
+        <!-- Separador -->
+
+        <!-- <section class="controlReproductor">
+            <div class="controles">
+                <button id="reproducir"><i class="fa-solid fa-play fa-xl"
+                        style="color: #ff4500; margin-right: 10px;"></i></button>
+                <button id="pausar"><i class="fa-solid fa-pause fa-xl"
+                        style="color: #ffffff; margin-right: 10px;"></i></button>
+                <button id="reiniciar"><i class="fa-solid fa-rotate-left fa-xl"
+                        style="color: #ffffff; margin-right: 10px;"></i></button>
+                <i class="fa-solid fa-volume-off fa-xl" style="color: #ffffff;"></i>
+                <input id="volumen" type="range" min="0" max="100" step="1">
+            </div>
+        </section> -->
 
         <!-- Separador -->
 
@@ -121,17 +121,17 @@
             </ul>
         </section>
 
-        <!-- Reproductor -->
+        <!-- Separador -->
 
-        <div class="twitch">
+        <!-- <div class="twitch">
             <iframe id="twitch-iframe"
                 src="https://player.twitch.tv/?channel=radiomasuytv&parent=radio-mas.netlify.app&muted=true"
                 height="480" width="800" allowfullscreen>
             </iframe>
-        </div>
-
-        <!-- Reproductor -->
-
+        </div> -->
+        <div id="twitch-embed"></div>
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
         <!-- Separador -->
 
         <section>
@@ -158,6 +158,8 @@
         </section>
 
     </main>
+
+    <!-- Separador -->
 
     <footer>
         <section>
