@@ -4,27 +4,33 @@
 
 //?--------------------------------------- Reproductor.
 
-var player;
-new Twitch.Embed("twitch-embed", {
-    channel: "radiomasuytv",  // Cambia esto por tu canal
-    width: 854,
-    height: 480,
-    layout: "video",
-    autoplay: false,
-    events: {
-        onReady: function (event) {
-            player = event.target;
+document.addEventListener("DOMContentLoaded", function () {
+    var player;
+    new Twitch.Embed("twitch-embed", {
+        channel: "radiomasuytv",  // Tu canal
+        width: 854,
+        height: 480,
+        layout: "video",
+        autoplay: false,
+        events: {
+            onReady: function (event) {
+                player = event.target;
+            }
         }
-    }
+    });
+
+    document.getElementById("play").onclick = function () {
+        if (player) {
+            player.play();
+        }
+    };
+
+    document.getElementById("pause").onclick = function () {
+        if (player) {
+            player.pause();
+        }
+    };
 });
-
-document.getElementById("play").onclick = function () {
-    player.play();
-};
-
-document.getElementById("pause").onclick = function () {
-    player.pause();
-};
 
 //?--------------------------------------- Reproductor.
 
