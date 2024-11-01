@@ -15,36 +15,40 @@ body {
 
 h1 {
     color: white;
-    font-size: 56px;
+    font-size: 72px;
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
 h2 {
     color: white;
-    font-size: 48px;
+    font-size: 60px;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 h3 {
     color: white;
     font-size: 36px;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 h4 {
-    font-size: 32px;
+    font-size: 21;
     color: white;
 }
 
 h5 {
-    font-size: 24px;
+    font-size: 18px;
     color: white;
 }
 
 p {
-    color: gray;
+    color: #ACACAC;
     font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    margin: 0;
 }
 
 main {
@@ -96,6 +100,10 @@ a {
 .navbar-brand {
     font-family: 'Poppins', sans-serif !important;
     font-size: 20px !important;
+    color: gainsboro !important;
+}
+
+.navbar-brand:hover {
     color: whitesmoke !important;
 }
 
@@ -141,18 +149,9 @@ a {
     z-index: 900;
 }
 
-.twitch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 120px 0 0 0;
-}
+/*  Sección Controles */
 
-iframe {
-    border: none;
-}
-
-.controlReproductor {
+.control-reproductor {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -165,25 +164,18 @@ iframe {
     background-color: rgb(20, 20, 20);
 }
 
-.controlReproductor div {
+.control-reproductor div {
     display: flex;
     align-items: center;
 }
 
-.controlReproductor p {
+.control-reproductor p {
     margin: 0 15px;
 }
 
-.controlReproductor strong {
+.control-reproductor strong {
     color: white;
     font-weight: 400;
-}
-
-.video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 0 60px 0;
 }
 
 .controles {
@@ -212,11 +204,15 @@ button {
     font-size: 16px;
 }
 
+/*  Sección Controles */
+
+/*  Sección Introduccion */
+
 .introduccion {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 120px;
+    margin: 0 90px 120px 90px;
 }
 
 .introduccion img {
@@ -248,22 +244,15 @@ button {
 
 .introduccion h2 {
     font-weight: normal;
-    margin-bottom: 30px;
 }
 
 .introduccion strong {
     color: #ff4500;
 }
 
-.introduccion a {
-    color: white;
-    font-size: 16px;
-    padding: 15px;
-    border: white 1px solid;
-    border-radius: 30px;
-    text-decoration: none;
-    font-style: normal;
-}
+/*  Sección Introduccion */
+
+/*  Sección Slider */
 
 .slider-container {
     position: relative;
@@ -324,9 +313,93 @@ button {
 
 .markers a.active,
 .markers a:hover {
-    background: white;
+    background: #141414;
     opacity: 1;
 }
+
+/*  Sección Slider */
+
+/*  Sección Resumen */
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 60px 90px;
+}
+
+.resumen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 1200px;
+    margin: auto;
+    margin-right: 120px;
+}
+
+.resumen h4 {
+    margin: 0 0 15px 0;
+}
+
+.resumen .button-active {
+    margin-right: 15px;
+}
+
+.button {
+    background-color: #222224;
+    color: white;
+    border-radius: 30px;
+    padding: 16px 24px;
+    font-size: 18px;
+    line-height: 24px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+}
+
+.button:hover {
+    background-color: #333337;
+}
+
+.button-active {
+    background-color: #ff4500;
+    color: white;
+    border-radius: 30px;
+    padding: 16px 24px;
+    font-size: 18px;
+    line-height: 24px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+}
+
+.button-active:hover {
+    background-color: #333337;
+}
+
+/*  Sección Resumen */
+
+/*  Sección Reproductor */
+
+.twitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0;
+}
+
+iframe {
+    border: none;
+}
+
+/*  Sección Reproductor */
+
+/*  Sección Marcas */
 
 .logos {
     overflow: hidden;
@@ -368,19 +441,45 @@ button {
     height: 0;
 }
 
-.maps {
-    width: 100%;
-    height: 300px;
-    margin: 60px 0 0 0;
-    padding: 0;
+/*  Sección Marcas */
+
+/*  Sección Nosotros */
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 60px 90px;
 }
 
-.maps iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
+.resumen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 1200px;
+    margin: auto;
+    margin-right: 120px;
 }
 
+/*  Sección Nosotros */
+
+/*  Banner */
+
+.banner {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner img {
+    width: 900px;
+
+}
+
+/*  Banner */
 
 /*?------------------------------------------------------------------------------------------------------*/
 
@@ -477,13 +576,85 @@ footer a p:hover {
 
 /*!------------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width:1366px) {
-    .logos {
-        margin: 120px 0;
+@media (max-width: 1300px) {
+    .slider {
+        width: 100%;
+    }
+
+    .slider img {
+        object-fit: contain;
+    }
+
+    .markers {
+        display: none;
     }
 }
 
-@media screen and (max-width:1250px) {
+@media (max-width: 1250px) {
+    .contenedor {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin: 60px 90px;
+    }
+
+    .resumen {
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        width: 600px;
+        margin: auto;
+    }
+
+    spline-viewer {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .slider {
+        height: 350px;
+    }
+}
+
+@media (max-width: 1080px) {
+
+    .introduccion {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 60px 90px;
+    }
+
+    .introduccion img {
+        width: 150px;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .logos {
+        margin: 90px;
+    }
+
+    .logos-slide img {
+        height: 60px;
+    }
+
+    .banner img {
+        width: 600px;
+    }
+
     h1 {
         font-size: 48px;
     }
@@ -495,57 +666,27 @@ footer a p:hover {
     h3 {
         font-size: 32px;
     }
-
-    h4 {
-        font-size: 24px;
-    }
-
-    h5 {
-        font-size: 21px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .slider img {
-        object-fit: contain;
-    }
-
-    .markers {
-        display: none;
-    }
-}
-
-@media (max-width: 1100px) {
-    .chat {
-        position: fixed;
-        right: 30px;
-        z-index: 900;
-    }
-
-    .slider {
-        height: 300px;
-    }
-
-    .slider-container {
-        max-width: 800px;
-    }
 }
 
 @media screen and (max-width:950px) {
     .introduccion {
+        display: flex;
+        flex-direction: column;
+        margin: 60px 90px;
+    }
+
+    .introduccion img {
         margin-bottom: 60px;
     }
 
-    .slider-container {
-        max-width: 700px;
+    iframe {
+        margin: 0;
+        width: 100%;
+        max-width: 950px;
     }
 
     .logos {
-        margin: 90px 0;
-    }
-
-    .logos-slide img {
-        height: 60px;
+        margin: 60px 0;
     }
 
     footer {
@@ -554,104 +695,93 @@ footer a p:hover {
 }
 
 @media screen and (max-width:900px) {
-    .introduccion img {
-        width: 150px;
+    .slider {
+        height: 250px;
     }
-}
 
-@media screen and (max-width:850px) {
-    .slider-container {
-        max-width: 600px;
+    p {
+        font-size: 18px;
+    }
+
+    footer section {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
     }
 }
 
 @media screen and (max-width:800px) {
-    main {
-        margin-top: 90px;
-    }
-
-    .controlReproductor {
-        padding: 15px 30px;
-    }
-}
-
-@media screen and (max-width:750px) {
-    .introduccion {
-        margin: 30px;
+    .banner img {
+        width: 450px;
     }
 }
 
 @media screen and (max-width:700px) {
-    h1 {
-        font-size: 36px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    h3 {
-        font-size: 21px;
-    }
-
-    h4 {
-        font-size: 18px;
-    }
-
-    h5 {
-        font-size: 16px;
-    }
-
-    button {
-        padding: 5px;
-    }
-
-    .controlReproductor {
-        padding: 10px 15px;
-    }
-
-    .introduccion img {
-        height: 150px;
-        width: auto;
-    }
-
-    .logos {
-        margin: 60px 0;
-    }
-
-    .slider-container {
-        max-width: 500px;
-    }
-
-    footer {
-        padding: 30px;
+    .slider {
+        height: 200px;
     }
 }
 
-@media screen and (max-width:576px) {
-    .introduccion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .introduccion img {
-        width: 120px;
-        height: auto;
-        margin: 15px 0 15px 0;
-    }
-
-    .slider-container {
-        max-width: 450px;
-    }
-
+@media screen and (max-width:650px) {
     footer section {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
+    .socialMedia img {
+        margin-bottom: 60px;
+    }
+
+    button {
+        padding: 5px;
+    }
+
+    .control-reproductor {
+        padding: 10px 15px;
+    }
+
+    .button {
+        padding: 13px 21px;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .button-active {
+        padding: 13px 21px;
+        font-size: 16px;
+        line-height: 21px;
+    }
 }
+
+@media screen and (max-width:600px) {
+    .introduccion {
+        margin: 60px 30px;
+    }
+
+    .slider {
+        height: 150px;
+    }
+
+    .contenedor {
+        margin: 60px 30px;
+    }
+
+    .banner img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:572px) {}
+
+@media screen and (max-width:480px) {}
+
+@media screen and (max-width:360px) {}
+
+@media screen and (max-width:325px) {}
+
+/* Separador */
 
 /*!------------------------------------------------------------------------------------------------------*/
 

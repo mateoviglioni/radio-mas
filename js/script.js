@@ -39,12 +39,12 @@ document.getElementById('reiniciar').addEventListener('click', () => {
 
 
 
-//*--------------------------------------- Carrousel marcas.
+//?--------------------------------------- Carrousel marcas.
 
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
 
-//*--------------------------------------- Carrousel marcas.
+//?--------------------------------------- Carrousel marcas.
 
 
 
