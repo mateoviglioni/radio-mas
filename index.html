@@ -75,13 +75,13 @@
                             <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Programas</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="">Radio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Nosotros</a>
+                            <a class="nav-link" href="">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -142,12 +142,11 @@
                         para acompañarte en cada momento del día.
                     </p>
                     <br>
-                    <div>
-                        <a href="#verTransmision" class="button-active">
-                            <i class="fa-solid fa-arrow-down-long fa-beat fa-sm" style="margin-right: 15px;"></i>Ver
-                            transmisión en vivo
-                        </a>
-                        <a href="#contacto" class="button">Contacto</a>
+                    <div class="resumen-cta">
+                        <a href="#transmision" class="button-true">
+                            <i class="fa-solid fa-arrow-down-long fa-beat fa-sm" style="margin-right: 15px;"></i>
+                            Ver transmisión en vivo</a>
+                        <a href="#contacto" class="button-false">Contacto</a>
                     </div>
                 </div>
             </section>
@@ -177,12 +176,12 @@
 
         <!-- Separador -->
 
-        <div class="twitch">
+        <section id="transmision" class="twitch">
             <iframe id="twitch-iframe"
                 src="https://player.twitch.tv/?channel=radiomasuytv&parent=radio-mas.netlify.app&muted=true"
                 height="480" width="800" allowfullscreen>
             </iframe>
-        </div>
+        </section>
 
         <!-- Separador -->
 
@@ -209,7 +208,7 @@
         <!-- Separador -->
 
         <footer>
-            <section>
+            <section id="contacto">
                 <div>
                     <h4>Contacto</h4>
                     <ul>
@@ -244,7 +243,7 @@
                 <p>©Radiomas. Todos los derechos reservados. 2024.</p>
             </section>
 
-            <div class="socialMedia">
+            <div class="social-media">
                 <a href="https://www.instagram.com/radiomasuy/"><img src="img/instagram.png" alt="Instagram"
                         target="_blank"></a>
                 <a href="https://www.facebook.com/login/?locale=es_LA"><img src="img/facebook.png" alt="Facebook"
