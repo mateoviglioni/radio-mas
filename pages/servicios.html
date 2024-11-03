@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap -->
+
+    <title>Servicios Radio Mas</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="image/x-icon">
+    <link rel="icon" type="/img/favicon.ico" sizes="32x32" href="/image/x-icon">
+    <link rel="icon" type="/img/favicon.ico" sizes="16x16" href="/image/x-icon">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Favicon -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- FontAwesome -->
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Css -->
+
+    <!-- Meta -->
+    <meta name="description"
+        content="Escucha Radio Mas, la primera radio multimedia de Uruguay. Disfruta de programas en vivo, entrevistas y contenido exclusivo. ¡Sintoniza ahora!">
+    <!-- Meta -->
+
+    <!-- Keywords -->
+    <meta name="keywords"
+        content="Radio Uruguay, Radio en vivo, Radio online, Música en línea, Programas de radio, Noticias de Uruguay, Transmisión en vivo, Emisora de radio, Cultura uruguaya, Entretenimiento.">
+    <!-- Keywords -->
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Radio Mas - La Primera Radio Multimedia de Uruguay">
+    <meta property="og:url" content="https://radio-mas.netlify.app/#verTransmision">
+    <meta property="og:image" content="./img/logoNegativo.png">
+    <meta property="og:description"
+        content="Escucha y mira Radio Mas, la primera radio multimedia de Uruguay, donde la música y la información se encuentran.">
+    <!-- Open Graph -->
+
+    <!-- Spline -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"></script>
+    <!-- Spline -->
+</head>
+
+<body>
+
+    <div class="shadow-background"></div>
+
+    <!-- Separador -->
+
+    <div class="chat">
+        <a href="https://web.whatsapp.com/" target="_blank" title="WhatsApp">
+            <i class="fa-solid fa-comment fa-beat fa-2xl" style="color: #25D366;"></i>
+        </a>
+    </div>
+
+    <!-- Separador -->
+
+    <section class="control-reproductor">
+        <div class="controles">
+            <button id="reproducir"><i class="fa-solid fa-play fa-xl"
+                    style="color: #ff4500; margin-right: 10px;"></i></button>
+            <button id="pausar"><i class="fa-solid fa-pause fa-xl"
+                    style="color: #ffffff; margin-right: 10px;"></i></button>
+            <button id="reiniciar"><i class="fa-solid fa-rotate-left fa-xl"
+                    style="color: #ffffff; margin-right: 10px;"></i></button>
+            <i class="fa-solid fa-volume-off fa-xl" style="color: #ffffff;"></i>
+            <input id="volumen" type="range" min="0" max="100" step="1">
+        </div>
+    </section>
+
+    <!-- Separador -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Radio Mas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./radio.html">Radio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="servicios">
+            <div class="servicios-resumen">
+                <p>Planes</p>
+                <h3>Publicita con nosotros</h3>
+                <p><strong>Radio Más</strong>, la <strong>radio multimedia</strong> también en <strong>FM 90.7</strong>
+                    Uruguay ,
+                    <strong>ofrecemos planes de publicidad</strong> efectivos para dar visibilidad a tu negocio. Con
+                    opciones de radio en
+                    vivo y radio online, nuestra emisora conecta con una amplia audiencia, música en línea y noticias, a
+                    través de transmisión en vivo.
+                </p>
+                <br>
+                <p><strong>Nuestros planes publicitarios incluyen espacios exclusivos, menciones diarias, sorteos de su
+                        empresa y presencia en nuestro sitio web, garantizando la máxima exposición para tu
+                        marca.</strong>
+                </p>
+                <a class="button-true">Contáctate con un asesor</a>
+            </div>
+
+            <div class="cards-contenedor">
+                <img src="../img/mes-gratis.svg" alt="Descripción de la imagen" class="esquina-imagen">
+                <img src="../img/peeking.svg" alt="Persona observando desde atrás" class="persona-asomada">
+                <p>Mensual</p>
+                <h4>Suscripción Básica</h4>
+                <p>Microempresas</p>
+                <h3>$</h3>
+                <a href="https://www.mercadopago.com.uy/" target="_blank" class="button-false">Asesórate</a>
+                <p><strong>Comprende</strong></p>
+                <br>
+                <ul>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>Mención en un programa a
+                        elección.</li>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>Sorteo de un producto de su
+                        empresa.</li>
+                </ul>
+            </div>
+
+            <div class="cards-contenedor">
+                <p>Mensual</p>
+                <h4>Suscripción Básica Empresas</h4>
+                <p>Empresas</p>
+                <h3>$</h3>
+                <a href="https://www.mercadopago.com.uy/" target="_blank" class="button-false">Asesórate</a>
+                <p><strong>Comprende</strong></p>
+                <br>
+                <ul>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>Mención en un programa a
+                        elección.</li>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>Sorteo de un producto de su
+                        empresa. </li>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>Una entrevista semanal de 15
+                        minutos sobre su empresa. </li>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>16 menciones al día más dos
+                        extras en horario a elegir. </li>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>6 salidas en tanda general en el
+                        central matutino y nocturno. </li>
+                    <li><i class="fa-solid fa-check fa-lg" style="color: #ffffff;"></i>1 banner en la web.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contacto">
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:radiomas@gmail.com" target="_blank">E-mai: radiomas@gmail.com</a></li>
+                    <li><a href="https://wa.me/+598098180170/" target="_blank">Cel: (+598) 098 180 170</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="https://www.youtube.com/@radiomasuytv" target="_blank"
+                            rel="noopener noreferrer">Youtube</a></li>
+                    <li><a href="https://www.twitch.tv/radiomasuytv" target="_blank"
+                            rel="noopener noreferrer">Twitch</a></li>
+                    <li><a href="https://www.instagram.com/radiomasuy/" target="_blank"
+                            rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/?locale=es_LA" target="_blank"
+                            rel="noopener noreferrer">Facebook</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Sitio</h4>
+                <ul>
+                    <li><a href="#sitio">Ver transmisión</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="derechos">
+            <p>©Radiomas. Todos los derechos reservados. 2024.</p>
+        </section>
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/radiomasuy/"><img src="../img/instagram.png" alt="Instagram"
+                    target="_blank"></a>
+            <a href="https://www.facebook.com/login/?locale=es_LA"><img src="../img/facebook.png" alt="Facebook"
+                    target="_blank"></a>
+            <a href="https://x.com/?lang=es"><img src="../img/x.png" alt="../Twitter (X)" target="_blank"></a>
+            <a href="https://www.tiktok.com/@radiomastv"><img src="../img/tiktok.png" alt="TikTok" target="_blank"></a>
+            <a href="https://www.youtube.com/"><img src="../img/youtube.png" alt="Youtube" target="_blank"></a>
+            <a href="https://www.twitch.tv/radiomasuytv"><img src="../img/twitch.png" alt="Twitch" target="_blank"></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
+    <!-- Javascript -->
+</body>
+
+</html>
