@@ -9,28 +9,26 @@ const player = new Twitch.Player('twitch-iframe', {
     parent: ['radio-mas.netlify.app'],
     width: 800,
     height: 480,
-    muted: false // Se asegura de que el video comience silenciado
+    muted: false
 });
 
-// Controlar el volumen con la barra
 const volumeControl = document.getElementById('volumen');
 volumeControl.addEventListener('input', (event) => {
-    const volume = event.target.value / 100; // Convertir el valor a un rango de 0 a 1
-    player.setVolume(volume); // Establecer el volumen del reproductor
+    const volume = event.target.value / 100;
+    player.setVolume(volume);
 });
 
-// Funcionalidad de los botones de control
 document.getElementById('reproducir').addEventListener('click', () => {
-    player.play(); // Reproducir el video
+    player.play();
 });
 
 document.getElementById('pausar').addEventListener('click', () => {
-    player.pause(); // Pausar el video
+    player.pause();
 });
 
 document.getElementById('reiniciar').addEventListener('click', () => {
-    player.seek(0); // Reiniciar el video al inicio
-    player.play(); // Reproducir el video nuevamente
+    player.seek(0);
+    player.play();
 });
 
 //?--------------------------------------- Reproductor.
@@ -84,7 +82,53 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(autoSlide, 9000);
 });
 
-//?--------------------------------------- Slide.
+//?--------------------------------------- Carrousel marcas.
+
+
+
+
+
+
+//?--------------------------------------- Carrousel marcas.
+
+const videoThumbnails = document.querySelectorAll(".video-thumbnail");
+const modals = document.querySelectorAll(".modal");
+const closeButtons = document.querySelectorAll(".close");
+
+videoThumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", () => {
+        const modalId = thumbnail.getAttribute("data-modal-target");
+        const modal = document.getElementById(modalId);
+        const iframe = modal.querySelector("iframe");
+
+        modal.style.display = "block";
+        iframe.src = iframe.getAttribute("data-src");
+    });
+});
+
+closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const modalId = button.getAttribute("data-close");
+        const modal = document.getElementById(modalId);
+        const iframe = modal.querySelector("iframe");
+
+        modal.style.display = "none";
+        iframe.src = "";
+    });
+});
+
+window.addEventListener("click", (event) => {
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            const iframe = modal.querySelector("iframe");
+            iframe.src = "";
+        }
+    });
+});
+
+//?--------------------------------------- Carrousel marcas.
 
 //! ------------------------------------------------------------------------------------------------------- Fin.
 
+//! Funcionalidades.

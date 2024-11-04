@@ -200,8 +200,63 @@
 
         <!-- Separador -->
 
+        <section class="transmisiones">
+            <div>
+                <h3>Últimos programas</h3>
+                <p>Descubre lo mejor de nuestras recientes transmisiones aquí.</p>
+            </div>
+        </section>
+
+        <section class="transmisiones-finalizadas">
+            <div class="video-thumbnail" data-modal-target="videoModal1">
+                <img src="./img/foto.jpg" alt="Previsualización del video 1">
+                <div class="play-button"><i class="fa-solid fa-play fa-sm" style="color: #ffffff;"></i></div>
+            </div>
+
+            <div class="video-thumbnail" data-modal-target="videoModal2">
+                <img src="./img/no-hay.jpg" alt="Previsualización del video 2">
+                <!-- <div class="play-button"><i class="fa-solid fa-play fa-sm" style="color: #ffffff;"></i></div> -->
+            </div>
+
+            <div class="video-thumbnail" data-modal-target="videoModal3">
+                <img src="./img/no-hay.jpg" alt="Previsualización del video 3">
+                <!-- <div class="play-button"><i class="fa-solid fa-play fa-sm" style="color: #ffffff;"></i></div> -->
+            </div>
+
+            <!-- Ventanas emergentes -->
+
+            <div id="videoModal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-close="videoModal1">&times;</span>
+                    <iframe width="560" height="315" src=""
+                        data-src="https://www.youtube.com/embed/r70GxsEdcTg?si=2qNBLZKhqlhD3aBT"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="videoModal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-close="videoModal2">&times;</span>
+                    <iframe width="560" height="315" src="" data-src="" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="videoModal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-close="videoModal3">&times;</span>
+                    <iframe width="560" height="315" src="" data-src="" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador -->
+
         <section class="banner"><img src="./img/banner.svg" alt="Banner"></section>
+
+        <!-- Separador -->
     </main>
+
+    <!-- Separador -->
 
     <footer>
         <section id="contacto">
@@ -230,7 +285,7 @@
             <div>
                 <h4>Sitio</h4>
                 <ul>
-                    <li><a href="#sitio">Ver transmisión</a></li>
+                    <li><a href="#transmision">Ver transmisión</a></li>
                 </ul>
             </div>
         </section>

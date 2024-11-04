@@ -443,6 +443,82 @@ iframe {
 
 /*  Sección Marcas */
 
+/*  Video Thumbnail */
+
+.transmisiones {
+    display: flex;
+    margin: 60px 90px 0 90px;
+}
+
+.transmisiones-finalizadas {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 90px 90px 90px;
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 400px;
+    height: 225px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+}
+
+.modal {
+    border: none;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    border: none;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background: none;
+    background-color: none;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    color: #ACACAC;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: white;
+}
+
+/*  Video Thumbnail */
+
 /*  Sección Nosotros */
 
 .contenedor {
@@ -467,7 +543,6 @@ iframe {
 /*  Banner */
 
 .banner {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -804,6 +879,12 @@ footer a p:hover {
 /*! Separador */
 
 @media (max-width: 1650px) {
+
+    .video-thumbnail {
+        width: 300px;
+        height: 170px;
+    }
+
     .servicios {
         display: flex;
         flex-direction: column;
@@ -847,6 +928,13 @@ footer a p:hover {
 /*! Separador */
 
 @media (max-width: 1250px) {
+
+    .transmisiones-finalizadas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 90px 90px 90px;
+    }
 
     .contenedor {
         display: flex;
@@ -1060,6 +1148,15 @@ footer a p:hover {
 
     .contenedor {
         margin: 60px 30px;
+    }
+
+    .transmisiones {
+        display: flex;
+        margin: 30px 30px 0 30px;
+    }
+
+    .transmisiones-finalizadas {
+        margin: 30px;
     }
 
     .banner img {
