@@ -1,0 +1,96 @@
+label {
+    font-family: 'Poppins', sans-serif;
+    width: 300px;
+    font-size: 18px;
+    color: gray;
+}
+
+textarea {
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="range"] {
+    width: 150px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 60px 0;
+    width: auto;
+
+    .contact-form-data {
+        width: auto;
+        background-color: none;
+        border-radius: 10px;
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            color: #acacac;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 30px;
+            background: #ffffff1a;
+            color: #acacac;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+
+            &:focus {
+                outline: none;
+                border-color: transparent;
+                box-shadow: none;
+            }
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 16px 24px;
+            color: #acacac;
+            font-size: 18px;
+            line-height: 24px;
+            background-color: #222224;
+            border: none;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 300ms ease-in-out;
+
+            &:hover {
+                background-color: #333337;
+                color: white;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .contact-form-data {
+        padding: 0 30px 30px 30px;
+    }
+}

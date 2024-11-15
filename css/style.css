@@ -6,7 +6,13 @@
 
 * {
     margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
+    background: transparent;
+    border: none;
 }
 
 body {
@@ -74,6 +80,7 @@ input {
 
 textarea {
     font-family: 'Poppins', sans-serif;
+    resize: none;
 }
 
 /*!------------------------------------------------------------------------------------------------------*/
@@ -87,7 +94,6 @@ textarea {
 /*? Header Nav */
 
 /*?------------------------------------------------------------------------------------------------------*/
-
 .container-fluid img {
     height: auto;
     width: 15px;
@@ -155,8 +161,8 @@ textarea {
 
 /*?------------------------------------------------------------------------------------------------------*/
 
-.shadow-background {
-    background: radial-gradient(ellipse 80% 80% at 50% -20%, #ffffff10, #fff0);
+.lightning {
+    background: radial-gradient(ellipse 80% 80% at 50% -20%, #ffffff20, #ffffff00);
     position: absolute;
     top: 0;
     width: 100%;
@@ -172,21 +178,9 @@ textarea {
     z-index: 900;
 }
 
-/* .chat a {
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 24px;
-    text-decoration: none;
-}
-
-.chat:hover {
-    background-color: #1ebe57;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.25);
-} */
-
 /*  Sección Controles */
 
-.control-reproductor {
+.control-player {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -200,21 +194,21 @@ textarea {
     border-top: 1px solid #ffffff0d;
 }
 
-.control-reproductor div {
+.control-player div {
     display: flex;
     align-items: center;
 }
 
-.control-reproductor p {
+.control-player p {
     margin: 0 15px;
 }
 
-.control-reproductor strong {
+.control-player strong {
     color: white;
     font-weight: 400;
 }
 
-.controles {
+.controls {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -244,19 +238,36 @@ button {
 
 /*  Sección Introduccion */
 
-.introduccion {
+.introduction {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 90px 120px 90px;
 }
 
-.introduccion img {
+.introduction img {
     width: 200px;
     height: auto;
     transform: translateY(0px);
     animation: float 6s ease-in-out infinite;
     filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.8));
+}
+
+.introduction p {
+    font-size: 36px;
+}
+
+.introduction a {
+    margin-top: 15px;
+}
+
+
+.introduction h2 {
+    font-weight: normal;
+}
+
+.introduction strong {
+    color: #ff4500;
 }
 
 @keyframes float {
@@ -271,23 +282,6 @@ button {
     100% {
         transform: translatey(0px);
     }
-}
-
-.introduccion p {
-    font-size: 36px;
-}
-
-.introduccion a {
-    margin-top: 15px;
-}
-
-
-.introduccion h2 {
-    font-weight: normal;
-}
-
-.introduccion strong {
-    color: #ff4500;
 }
 
 /*  Sección Introduccion */
@@ -361,7 +355,7 @@ button {
 
 /*  Sección Resumen */
 
-.contenedor {
+.container-summary {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -369,7 +363,7 @@ button {
     max-height: auto;
 }
 
-.resumen {
+.summary {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,11 +373,11 @@ button {
     margin-right: 120px;
 }
 
-.resumen h4 {
+.summary h4 {
     margin: 0 0 15px 0;
 }
 
-.resumen .button-true {
+.summary .button-true {
     margin-right: 15px;
 }
 
@@ -477,23 +471,16 @@ iframe {
     }
 }
 
-.logos-slide::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 0;
-}
-
 /*  Sección Marcas */
 
 /*  Video Thumbnail */
 
-.transmisiones {
+.transmissions {
     display: flex;
     margin: 60px 90px 0 90px;
 }
 
-.transmisiones-finalizadas {
+.transmissions-completed {
     display: flex;
     justify-content: space-around;
     margin: 30px 90px 90px 90px;
@@ -564,14 +551,14 @@ iframe {
 
 /*  Sección Nosotros */
 
-.contenedor {
+.container-summary {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: 60px 90px;
 }
 
-.resumen {
+.summary {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -606,7 +593,7 @@ iframe {
     margin: 90px;
 }
 
-.radio-resumen {
+.radio-summary {
     width: 900px;
     margin-right: 60px;
 }
@@ -646,30 +633,30 @@ iframe {
 
 /* Contacto */
 
-.contacto {
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0 60px 0;
 }
 
-.contacto-formulario-datos {
+.contact-form-data {
     width: auto;
     padding: 60px;
     background-color: none;
     border-radius: 10px;
 }
 
-.contacto-formulario-datos label {
+.contact-form-data label {
     display: block;
     margin-bottom: 15px;
     color: #acacac;
 }
 
-.contacto-formulario-datos input[type="text"],
-.contacto-formulario-datos input[type="email"],
-.contacto-formulario-datos input[type="tel"],
-.contacto-formulario-datos textarea {
+.contact-form-data input[type="text"],
+.contact-form-data input[type="email"],
+.contact-form-data input[type="tel"],
+.contact-form-data textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: 30px;
@@ -680,14 +667,14 @@ iframe {
     border-radius: 10px;
 }
 
-.contacto-formulario-datos input:focus,
-.contacto-formulario-datos textarea:focus {
+.contact-form-data input:focus,
+.contact-form-data textarea:focus {
     outline: none;
     border-color: transparent;
     box-shadow: none;
 }
 
-.contacto-formulario-datos input[type="submit"] {
+.contact-form-data input[type="submit"] {
     width: 100%;
     padding: 16px 24px;
     color: #ACACAC;
@@ -703,30 +690,26 @@ iframe {
     transition: 300ms ease-in-out;
 }
 
-.contacto-formulario-datos input[type="submit"]:hover {
+.contact-form-data input[type="submit"]:hover {
     background-color: #333337;
     color: white;
-}
-
-textarea {
-    resize: none;
 }
 
 /* Contacto */
 
 /* Servicios */
 
-.servicios {
+.services {
     display: flex;
     justify-content: space-between;
     margin: 60px 90px;
 }
 
-.servicios a {
+.services a {
     margin-top: 30px;
 }
 
-.servicios-resumen {
+.services-summary {
     width: 600px;
 }
 
@@ -735,7 +718,7 @@ textarea {
     justify-content: space-around;
 }
 
-.cards-contenedor {
+.cards-container {
     margin-right: 60px;
     display: flex;
     flex-direction: column;
@@ -760,27 +743,27 @@ textarea {
     max-height: none;
 }
 
-.cards-contenedor a {
+.cards-container a {
     margin: 0 0 15px 0;
 }
 
-.cards-contenedor h3 {
+.cards-container h3 {
     text-align: center;
     margin: 15px 0 15px 0;
 }
 
-.cards-contenedor h4 {
+.cards-container h4 {
     font-size: 18px;
     margin-bottom: 15px;
     text-align: center;
 }
 
-.cards-contenedor ul {
+.cards-container ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.cards-contenedor ul li {
+.cards-container ul li {
     display: flex;
     align-items: baseline;
     color: white;
@@ -792,7 +775,7 @@ textarea {
     margin-right: 8px;
 }
 
-.cards-contenedor p {
+.cards-container p {
     font-size: 18px;
     text-align: center;
 }
@@ -820,15 +803,15 @@ textarea {
 
 /*?------------------------------------------------------------------------------------------------------*/
 
-footer section {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 footer {
     background-color: #060606;
     border-top: 1px solid #ffffff0d;
     padding: 60px 120px 120px 120px;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 footer h3 {
@@ -871,7 +854,7 @@ footer a p:hover {
     color: white;
 }
 
-.derechos p {
+.copyright p {
     margin: 30px 0 30px 0;
     display: flex;
     flex-direction: column;
@@ -911,11 +894,11 @@ footer a p:hover {
         align-items: center;
     }
 
-    .radio-resumen {
+    .radio-summary {
         margin-right: 0;
     }
 
-    .radio-resumen a {
+    .radio-summary a {
         margin-bottom: 60px;
     }
 }
@@ -929,7 +912,7 @@ footer a p:hover {
         height: 170px;
     }
 
-    .servicios {
+    .services {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -940,7 +923,7 @@ footer a p:hover {
         flex-direction: column;
     }
 
-    .cards-contenedor {
+    .cards-container {
         margin: 60px 0 0 0;
         height: auto;
     }
@@ -982,21 +965,21 @@ footer a p:hover {
 
 @media (max-width: 1250px) {
 
-    .transmisiones-finalizadas {
+    .transmissions-completed {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 30px 90px 90px 90px;
     }
 
-    .contenedor {
+    .container-summary {
         display: flex;
         justify-content: left;
         align-items: left;
         margin: 60px 90px;
     }
 
-    .resumen {
+    .summary {
         display: flex;
         justify-content: left;
         text-align: left;
@@ -1004,7 +987,7 @@ footer a p:hover {
         margin: auto;
     }
 
-    .servicios {
+    .services {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1015,7 +998,7 @@ footer a p:hover {
         justify-content: center;
     }
 
-    .cards-contenedor {
+    .cards-container {
         margin: 60px 30px 0 30px;
     }
 }
@@ -1063,13 +1046,13 @@ footer a p:hover {
         font-size: 21px;
     }
 
-    .introduccion {
+    .introduction {
         display: flex;
         justify-content: space-evenly;
         margin: 60px 90px;
     }
 
-    .introduccion img {
+    .introduction img {
         width: 150px;
     }
 
@@ -1093,12 +1076,12 @@ footer a p:hover {
         margin: 60px 90px;
     }
 
-    .radio-resumen {
+    .radio-summary {
         width: auto;
         margin: auto;
     }
 
-    .servicios-resumen {
+    .services-summary {
         width: auto;
         margin: auto;
     }
@@ -1108,13 +1091,13 @@ footer a p:hover {
 
 @media screen and (max-width:950px) {
 
-    .introduccion {
+    .introduction {
         display: flex;
         flex-direction: column;
         margin: 60px 90px;
     }
 
-    .introduccion img {
+    .introduction img {
         margin-bottom: 60px;
     }
 
@@ -1193,20 +1176,20 @@ footer a p:hover {
 
 @media screen and (max-width:600px) {
 
-    .introduccion {
+    .introduction {
         margin: 60px 30px;
     }
 
-    .contenedor {
+    .container-summary {
         margin: 60px 30px;
     }
 
-    .transmisiones {
+    .transmissions {
         display: flex;
         margin: 30px 30px 0 30px;
     }
 
-    .transmisiones-finalizadas {
+    .transmissions-completed {
         margin: 30px;
     }
 
@@ -1218,20 +1201,20 @@ footer a p:hover {
         margin: 60px 30px;
     }
 
-    .radio-resumen a {
+    .radio-summary a {
         margin-bottom: 30px;
     }
 
-    .servicios {
+    .services {
         margin: 60px 30px;
     }
 
-    .servicios a {
+    .services a {
         margin-top: 30px;
         margin-bottom: 30px;
     }
 
-    .cards-contenedor {
+    .cards-container {
         width: 300px;
         margin: 60px 0 0 0;
     }
@@ -1246,7 +1229,7 @@ footer a p:hover {
         width: 80px;
     }
 
-    .contacto-formulario-datos {
+    .contact-form-data {
         padding: 30px;
     }
 }
@@ -1271,11 +1254,11 @@ footer a p:hover {
         font-size: 18px;
     }
 
-    .introduccion {
+    .introduction {
         margin: 60px 30px 30px 30px;
     }
 
-    .introduccion img {
+    .introduction img {
         width: 130px;
         margin-bottom: 30px;
     }
@@ -1292,7 +1275,7 @@ footer a p:hover {
         margin: 0;
     }
 
-    .contacto {
+    .contact {
         margin: 30px 15px;
     }
 }
@@ -1300,7 +1283,7 @@ footer a p:hover {
 /*! Separador */
 
 @media screen and (max-width:450px) {
-    .resumen-cta {
+    .summary-cta {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1310,7 +1293,7 @@ footer a p:hover {
         margin: 0;
     }
 
-    .resumen .button-true {
+    .summary .button-true {
         margin-right: 0;
     }
 
