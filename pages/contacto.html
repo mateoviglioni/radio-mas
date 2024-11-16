@@ -76,9 +76,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./radio.html">Radio</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="./servicios.html">Servicios</a>
-                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
                         </li>
@@ -92,17 +89,19 @@
         <section class="contact">
             <div class="contact-form">
                 <div class="contact-form-data">
-                    <form action="/enviar_datos" method="POST">
+                    <form action="https://formspree.io/f/mgveygjz" method="POST">
 
                         <label for="nombre">Nombre completo</label>
                         <input type="text" id="nombre" name="nombre" required placeholder="Nombre" autocomplete="off">
 
                         <label for="email">E-mail</label>
+
                         <input type="email" id="email" name="email" required placeholder="Correo electrónico"
                             autocomplete="off">
 
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Déjanos un mensaje"
+
+                        <textarea id="mensaje" name="message" rows="4" cols="50" placeholder="Déjanos un mensaje"
                             autocomplete="off"></textarea>
 
                         <input type="submit" value="Enviar">
