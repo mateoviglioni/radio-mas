@@ -448,7 +448,7 @@ button {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  margin: 90px;
+  margin: 120px 90px;
 }
 .logos:hover .logos-slide {
   animation-play-state: paused;
