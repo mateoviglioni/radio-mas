@@ -2,7 +2,7 @@ label {
     font-family: 'Poppins', sans-serif;
     width: 300px;
     font-size: 18px;
-    color: gray;
+    color: $color-secondary-2;
 }
 
 textarea {
@@ -22,7 +22,7 @@ button {
     padding: 15px;
     border: none;
     background-color: transparent;
-    color: white;
+    color: $color-secondary-1;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
@@ -43,7 +43,7 @@ button {
         label {
             display: block;
             margin-bottom: 15px;
-            color: #acacac;
+            color: $color-secondary-2;
         }
 
         input[type="text"],
@@ -53,8 +53,8 @@ button {
             width: 100%;
             padding: 15px;
             margin-bottom: 30px;
-            background: #ffffff1a;
-            color: #acacac;
+            background: $color-textarea;
+            color: $color-secondary-2;
             font-size: 18px;
             border: none;
             border-radius: 10px;
@@ -69,10 +69,10 @@ button {
         input[type="submit"] {
             width: 100%;
             padding: 16px 24px;
-            color: #acacac;
+            color: $color-secondary-2;
             font-size: 18px;
             line-height: 24px;
-            background-color: #222224;
+            background-color: $color-submit;
             border: none;
             border-radius: 10px;
             display: inline-block;
@@ -82,8 +82,8 @@ button {
             transition: 300ms ease-in-out;
 
             &:hover {
-                background-color: #333337;
-                color: white;
+                background-color: $color-button-hover;
+                color: $color-secondary-1;
             }
         }
     }

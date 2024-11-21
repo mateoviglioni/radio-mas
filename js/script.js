@@ -1,12 +1,8 @@
-//! Funcionalidades.
-
-//! ------------------------------------------------------------------------------------------------------- Inicio.
-
-//?--------------------------------------- Reproductor.
+// Reproductor.
 
 const player = new Twitch.Player('twitch-iframe', {
     channel: 'radiomasuytv',
-    parent: ['radio-mas.netlify.app'],
+    parent: ['radiomas.uy'],
     width: 800,
     height: 480,
     muted: false
@@ -31,24 +27,24 @@ document.getElementById('reiniciar').addEventListener('click', () => {
     player.play();
 });
 
-//?--------------------------------------- Reproductor.
+// Reproductor.
 
 
 
 
 
-//?--------------------------------------- Carrousel marcas.
+// Carrousel marcas.
 
 var copy = document.querySelector(".logos-slide").cloneNode(true);
 document.querySelector(".logos").appendChild(copy);
 
-//?--------------------------------------- Carrousel marcas.
+// Carrousel marcas.
 
 
 
 
 
-//?--------------------------------------- Slide.
+// Carrousel Slide.
 
 document.addEventListener('DOMContentLoaded', () => {
     const markers = document.querySelectorAll('.markers a');
@@ -82,14 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(autoSlide, 9000);
 });
 
-//?--------------------------------------- Carrousel marcas.
+// Carrousel Slide.
 
 
 
 
 
 
-//?--------------------------------------- Carrousel marcas.
+// VideoThumbnails.
 
 const videoThumbnails = document.querySelectorAll(".video-thumbnail");
 const modals = document.querySelectorAll(".modal");
@@ -127,8 +123,4 @@ window.addEventListener("click", (event) => {
     });
 });
 
-//?--------------------------------------- Carrousel marcas.
-
-//! ------------------------------------------------------------------------------------------------------- Fin.
-
-//! Funcionalidades.
+// VideoThumbnails.

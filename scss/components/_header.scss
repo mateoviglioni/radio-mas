@@ -1,14 +1,9 @@
-.container-fluid img {
-    height: auto !important;
-    width: 15px !important;
-}
-
 .d-inline-block {
     display: inline-block !important;
 }
 
 .bg-body-tertiary {
-    background-color: rgb(6, 6, 6, 0.9) !important;
+    background-color: $color-header !important;
 
 }
 
@@ -23,23 +18,23 @@
 .navbar-brand {
     font-family: "Michroma", sans-serif !important;
     font-size: 18px !important;
-    color: gainsboro !important;
+    color: $color-secondary-2 !important;
 }
 
 .navbar-brand:hover {
-    color: whitesmoke !important;
+    color: $color-secondary-1 !important;
 }
 
 .nav-link {
     font-family: 'Poppins', sans-serif !important;
     font-size: 18px !important;
-    color: gainsboro !important;
+    color: $color-secondary-2 !important;
     font-weight: normal !important;
 }
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
-    color: whitredesmoke !important;
+    color: $color-secondary-1 !important;
     font-weight: bold !important;
 }
 
