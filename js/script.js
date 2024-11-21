@@ -22,11 +22,6 @@ document.getElementById('pausar').addEventListener('click', () => {
     player.pause();
 });
 
-document.getElementById('reiniciar').addEventListener('click', () => {
-    player.seek(0);
-    player.play();
-});
-
 // Reproductor.
 
 
