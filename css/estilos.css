@@ -401,7 +401,7 @@ button {
 .introduction h2 {
   font-weight: normal;
 }
-.introduction strong {
+.introduction h2 strong {
   color: #F14B00;
 }
 .introduction .brand img {
@@ -551,6 +551,7 @@ button {
 }
 
 .modal-content {
+  top: 10%;
   border: none;
   position: relative;
   margin: 10% auto;

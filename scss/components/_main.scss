@@ -14,10 +14,10 @@
 
     h2 {
         font-weight: normal;
-    }
 
-    strong {
-        color: $color-primary-1;
+        strong {
+            color: $color-primary-1;
+        }
     }
 
     .brand {
@@ -185,6 +185,7 @@
 }
 
 .modal-content {
+    top: 10%;
     border: none;
     position: relative;
     margin: 10% auto;
